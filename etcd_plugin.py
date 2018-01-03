@@ -525,7 +525,7 @@ def format_dimensions(dimensions, more_dimensions=''):
     '''
     formatted = []
     formatted.extend(("%s=%s" % (k, v)) for k, v in six.iteritems(dimensions))
-    return ('[%s%s]' % (str(formatted).replace('\'', '').
+    return ('-%s%s' % (str(formatted).replace('\'', '').
             replace(' ', '').replace("\"", '').replace('[', '').
                 replace(']', ''),
                 '' if len(more_dimensions) == 1 else more_dimensions))
